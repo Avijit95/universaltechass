@@ -21,15 +21,15 @@
         <p>Name<span>*</span></p>
         <mat-form-field>
 
-          <input matInput placeholder="First Name"  [formControl]="myform.controls['fname']" (blur)="inputUntouch(myform,'fname')">
-          <mat-error  *ngIf="!myform.controls['fname'].valid && myform.controls['fname'].touched" class="errortext">First Name is required</mat-error>
+          <input matInput placeholder="First Name"  [formControl]="myform.controls['firstname']" (blur)="inputUntouch(myform,'firstname')">
+          <mat-error  *ngIf="!myform.controls['firstname'].valid && myform.controls['firstname'].touched" class="errortext">First Name is required</mat-error>
 
         </mat-form-field>
 
         <mat-form-field>
 
-          <input matInput placeholder="Last Name"  [formControl]="myform.controls['lname']" (blur)="inputUntouch(myform,'lname')">
-          <mat-error  *ngIf="!myform.controls['lname'].valid && myform.controls['lname'].touched" class="errortext">Last Name is required</mat-error>
+          <input matInput placeholder="Last Name"  [formControl]="myform.controls['lastname']" (blur)="inputUntouch(myform,'lastname')">
+          <mat-error  *ngIf="!myform.controls['lastname'].valid && myform.controls['lastname'].touched" class="errortext">Last Name is required</mat-error>
         </mat-form-field>
 
       </mat-card-subtitle>
@@ -54,12 +54,19 @@
           <mat-error  *ngIf="!myform.controls['city'].valid && myform.controls['city'].touched" class="errortext">City is required</mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <!-- <mat-form-field>
 
 
           <input matInput placeholder="State"  [formControl]="myform.controls['state']" (blur)="inputUntouch(myform,'state')">
           <mat-error  *ngIf="!myform.controls['state'].valid && myform.controls['state'].touched" class="errortext">State is required</mat-error>
 
+        </mat-form-field> -->
+        <mat-form-field>
+          <mat-label>State</mat-label>
+          <mat-select  placeholder="Select State"  [formControl]="myform.controls['state']" >
+            <mat-option *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</mat-option>
+          </mat-select>
+          <mat-error  *ngIf="!myform.controls['state'].valid && myform.controls['state'].touched">State is required</mat-error>
         </mat-form-field>
 
         <mat-form-field>
@@ -84,8 +91,8 @@
 
         <mat-form-field>
 
-          <input matInput   [formControl]="myform.controls['pnumber']" (blur)="inputUntouch(myform,'pnumber')">
-          <mat-error  *ngIf="!myform.controls['pnumber'].valid && myform.controls['pnumber'].touched" class="errortext">Phone Number is required</mat-error>
+          <input matInput   [formControl]="myform.controls['telephone']" (blur)="inputUntouch(myform,'telephone')">
+          <mat-error  *ngIf="!myform.controls['telephone'].valid && myform.controls['telephone'].touched" class="errortext">Phone Number is required</mat-error>
         </mat-form-field>
 
       </mat-card-subtitle>
@@ -110,8 +117,8 @@
         <mat-form-field >
 
 
-          <textarea matInput [formControl]="myform.controls['comment']" (blur)="inputUntouch(myform,'comment')"></textarea>
-          <mat-error  *ngIf="!myform.controls['comment'].valid && myform.controls['comment'].touched" class="errortext">Comment is required</mat-error>
+          <textarea matInput [formControl]="myform.controls['message']" (blur)="inputUntouch(myform,'message')"></textarea>
+          <mat-error  *ngIf="!myform.controls['message'].valid && myform.controls['message'].touched" class="errortext">Message is required</mat-error>
 
 
 

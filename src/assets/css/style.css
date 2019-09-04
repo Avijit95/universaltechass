@@ -522,10 +522,13 @@
 
 .contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(1){ width: 99%; margin: 0 0.5%;}
 
-.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(2){ width: 25%; margin: 0 0.5%;}
-.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(3){ width: 25%; margin: 0 0.5%;}
-.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(4){ width: 21%; margin: 0 0.5%;}
-.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(5){ width: 25%; margin: 0 0.5%;}
+.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(2){ width: 25%; margin: 0 0.5%; float: left;}
+.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(3){ width: 25%; margin: 0 0.5%; float: left;}
+.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(4){ width: 21%; margin: 0 0.5%; float: left;}
+.contact_wrapper .mat-card-subtitle:nth-of-type(2) .mat-form-field:nth-of-type(5){ width: 25%; margin: 0 0.5%; float: left;}
+
+.mat-select-arrow{ margin: 20px 4px 0 4px!important;}
+
 
 .contact_wrapper .mat-card-subtitle:nth-of-type(3){ width: 49%; margin: 0 0.5%; display: block; float: left;}
 .contact_wrapper .mat-card-subtitle:nth-of-type(4){ width: 49%; margin: 0 0.5%; display: block; float: left;}
