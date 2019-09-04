@@ -11,7 +11,7 @@ import {RepresentationComponent} from "./representation/representation.component
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'footer', component: FooterComponent},
-  {path:'portfolio', component: PortfolioComponent},
+  {path:'prospects', component: PortfolioComponent},
   {path:'investors', component: InvestorsComponent},
   {path:'contactus', component: ContactusComponent},
   {path:'aboutus', component: AboutComponent},
